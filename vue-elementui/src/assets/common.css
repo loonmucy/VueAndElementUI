@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body {
+
+}
+.atb-card {
+    height: 700px;
+}
+.el-table .addtotal-row {
+    background: #99FF99
+  }
+  .el-table .subtotal-row {
+      background: #CCFFCC;
+  }
