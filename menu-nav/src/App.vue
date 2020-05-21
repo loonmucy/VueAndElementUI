@@ -1,27 +1,23 @@
 <template>
-  <div id="app">
-    <p>current route name: {{$route.name}}</p>
-    <ul>
-      <li>
-        <router-link :to="{name: 'home'}">home</router-link>
-      </li>
-      <li>
-        <router-link :to="{name: 'test', params: {id:123}}">test</router-link>
-      </li>
-      <li>
-        <router-link :to="{name: 'HelloWorld'}">HelloWorld</router-link>
-      </li>
-    </ul>
-    <router-view></router-view>
+  <div id="app" class="atb-container">
+    <div class="left-bar">
+      <leftBar></leftBar>
+    </div>
+    <div class="main-data">
+      <mainData></mainData>
+    </div>
+    
   </div>
 </template>
 
 <script>
+import mainData from './mainData'
+import leftBar from './leftBar'
 
 export default {
   name: 'App',
   components: {
-
+    mainData,leftBar
   },
   data() {
     return {
@@ -29,18 +25,30 @@ export default {
     }
   },
   created() {
-    console.log(this.$router)
+    // console.log(this.$router.options.routes)
+  },
+  methods: {
+
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+}
+.atb-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.left-bar {
+  flex: 1;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: rgb(84, 92, 100);
+}
+.main-data {
+  flex: 8;
+  margin-left: 30px;
 }
 </style>
