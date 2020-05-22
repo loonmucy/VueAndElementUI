@@ -4,20 +4,20 @@
       <leftBar></leftBar>
     </div>
     <div class="main-data">
-      <mainData></mainData>
+      <layout></layout>
     </div>
     
   </div>
 </template>
 
 <script>
-import mainData from './mainData'
 import leftBar from './leftBar'
+import layout from './layout'
 
 export default {
   name: 'App',
   components: {
-    mainData,leftBar
+    layout,leftBar
   },
   data() {
     return {
@@ -25,7 +25,7 @@ export default {
     }
   },
   created() {
-    // console.log(this.$router.options.routes)
+    console.log(this.$router)
   },
   methods: {
 
@@ -34,9 +34,6 @@ export default {
 </script>
 
 <style>
-#app {
-
-}
 .atb-container {
   display: flex;
   width: 100%;
