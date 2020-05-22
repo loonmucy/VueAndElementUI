@@ -45,7 +45,7 @@ export default {
   background: rgb(84, 92, 100);
 }
 .main-data {
-  flex: 8;
-  margin-left: 30px;
+  flex: 7;
+  padding: 30px;
 }
 </style>
